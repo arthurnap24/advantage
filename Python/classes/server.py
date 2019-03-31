@@ -1,8 +1,13 @@
 from flask import Flask, request, session
+from flask_cors import CORS
 from stock import Stock
 import json
+import logging
 
 app = Flask(__name__)
+CORS( app )
+# enable logging for flask_cors
+logging.getLogger( 'flask_cors' ).level = logging.DEBUG
 
 # ghetto database
 users = [ "ADragon", "Sampaguita" ]
@@ -15,8 +20,8 @@ def login( user ):
         # sells is a list of ( share price, # of shares) sold
         session[ "user" ] = {
             "symbol": "",
-            "dateRequested": ""
-            "buys": []
+            "dateRequested": "",
+            "buys": [],
             "sells": []
         }
         return ( "Hi %s" % user )
@@ -59,6 +64,6 @@ def create_bar( open, close, low, high ):
         'open': open,
         'close': close,
         'low': low,
-        'hight': high
+        'high': high
     }
     return bar

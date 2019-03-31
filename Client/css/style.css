@@ -26,8 +26,8 @@ nav {
     padding-bottom: 10010px;
     margin-bottom: -10000px;
     float: left;
-    width: 230px;
-    margin-left: -230px;
+    width: 500px;
+    margin-left: -500px;
     background: #eee;
 }
 
@@ -37,6 +37,7 @@ footer {
     background: #ccc;
     text-align: center;
     padding: 4px 0;
+    font-size: 8pt;
 }
 
 #wrapper {
@@ -44,12 +45,37 @@ footer {
 }
             
 #content {
-    margin-right: 230px; /* Same as 'nav' width */
+    margin-right: 500px; /* Same as 'nav' width */
 }
 
 .innertube {
     margin: 15px; /* Padding for content */
     margin-top: 0;
+}
+
+.order_button {
+    font-size: 2em;
+    border: none;
+    color: white;
+    background-color: darkolivegreen;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#start_button {
+    background-color: darkolivegreen;
+}
+
+#stop_button {
+    background-color: darkred;
+}
+
+#buy_button {
+    background-color: #4CAF50;
+}
+
+#sell_button {
+    background-color: red;
 }
 
 p {
